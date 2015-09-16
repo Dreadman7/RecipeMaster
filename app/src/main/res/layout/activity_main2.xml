@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/pizza2"
+        android:contentDescription="@string/pizza"
+        android:scaleType="fitCenter"
+        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton2"
+        android:src="@mipmap/button_exit"
+        android:onClick="imageButtonOnClick"
+        android:scaleType="fitCenter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButton4"
+        android:src="@mipmap/button_recipe"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/imageButton2"
+        android:onClick="imageButtonOnClick4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Get_the_recipe"
+        android:id="@+id/button2"
+        android:layout_above="@+id/imageButton4"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:onClick="ButtononClick" />
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment2"
+        android:name="com.mooduplabs.recipemaster.FacebookLoginButton"
+        tools:layout="@layout/fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:layout_below="@+id/imageButton4"
+        android:layout_alignStart="@+id/imageView" />
+
+</RelativeLayout>
